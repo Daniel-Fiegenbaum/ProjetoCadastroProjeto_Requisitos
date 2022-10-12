@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProjetoDaniel" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="564da5eb-7a5d-4aa0-b715-a1e74c1c8dc1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db_projetodaniel"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select r.id, r.nomerequisito, r.descricaorequisito, r.prioridaderequisito, r.tiporequisito , r.complexidade , p.nomeprojeto 
+from requisito r, projeto p
+where r.projeto_id = p.id ;]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="requisito"/>
+	</field>
+	<field name="nomerequisito" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nomerequisito"/>
+		<property name="com.jaspersoft.studio.field.label" value="nomerequisito"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="requisito"/>
+	</field>
+	<field name="descricaorequisito" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="descricaorequisito"/>
+		<property name="com.jaspersoft.studio.field.label" value="descricaorequisito"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="requisito"/>
+	</field>
+	<field name="prioridaderequisito" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="prioridaderequisito"/>
+		<property name="com.jaspersoft.studio.field.label" value="prioridaderequisito"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="requisito"/>
+	</field>
+	<field name="tiporequisito" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tiporequisito"/>
+		<property name="com.jaspersoft.studio.field.label" value="tiporequisito"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="requisito"/>
+	</field>
+	<field name="complexidade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="complexidade"/>
+		<property name="com.jaspersoft.studio.field.label" value="complexidade"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="requisito"/>
+	</field>
+	<field name="nomeprojeto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nomeprojeto"/>
+		<property name="com.jaspersoft.studio.field.label" value="nomeprojeto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="projeto"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="77" y="40" width="400" height="30" uuid="eacecdcf-003b-494b-9d70-941e406ec675"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="21"/>
+				</textElement>
+				<text><![CDATA[Listagem de Requisitos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="11" width="120" height="30" uuid="7f9bc0d3-8b00-4b4c-8e47-c772fa252237"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Nome do Projeto:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="10" width="125" height="30" uuid="ec0feeb5-694a-40a7-bd0e-f9e977e9ee83">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84e1f98f-540b-40ec-b853-112b8bd0b425"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeprojeto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="20" width="40" height="30" uuid="1e5b7dd7-f5c0-4c7e-bc90-433a0c4c22bf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6cf7272-791f-4fc2-9894-e65bc9e71492"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="20" width="100" height="30" uuid="ade4b454-c9f7-4071-b978-17f68583597c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84e1f98f-540b-40ec-b853-112b8bd0b425"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nome Projeto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="20" width="100" height="30" uuid="2081fc2f-2953-428b-aa9f-e4dbdf20b88a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="263f9318-8670-4241-8a41-10c3bbaa24f8"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nome Requisito]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="20" width="120" height="30" uuid="492fcebd-c1f7-47da-aef3-8cd9931a1073">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8f17c26b-ff08-4d29-a39e-27d31104fb27"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Descricao Requisito]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="20" width="100" height="30" uuid="29bea37c-fef4-48d3-a670-a9f8e65fbb9a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b0478da-6ee2-42b1-aafe-a45e414fe32f"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tipo Requisito]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="20" width="80" height="30" uuid="e902273c-e182-4edc-9992-7da30b9a7f25">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a3cb3569-f0a2-4a31-bd50-b1d6fc901555"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Complexidade]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="59" splitType="Stretch">
+			<textField>
+				<reportElement x="15" y="10" width="40" height="30" uuid="b180241a-59bb-46e6-b69d-cf001810d277">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6cf7272-791f-4fc2-9894-e65bc9e71492"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="10" width="90" height="30" uuid="ce1c389f-1666-485e-9df2-26046de907eb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84e1f98f-540b-40ec-b853-112b8bd0b425"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nomeprojeto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="10" width="100" height="30" uuid="6413e15e-2acc-4baa-805f-41cdc30f712c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="263f9318-8670-4241-8a41-10c3bbaa24f8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nomerequisito}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="10" width="120" height="30" uuid="eb9959d2-c739-4052-a3f3-abbc5e6215f8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8f17c26b-ff08-4d29-a39e-27d31104fb27"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{descricaorequisito}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="10" width="95" height="30" uuid="d8b6ca2d-db04-4042-be6c-9eda49b03104">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b0478da-6ee2-42b1-aafe-a45e414fe32f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tiporequisito}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="10" width="100" height="30" uuid="082c0ed9-3c20-4602-88ab-60f16d9f943d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a3cb3569-f0a2-4a31-bd50-b1d6fc901555"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{complexidade}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

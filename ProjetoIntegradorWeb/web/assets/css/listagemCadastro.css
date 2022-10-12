@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #f54758;
+    ;
+}
+
+.container{
+    width: 100w;
+    height: 100vh;
+    background: #8a8889;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box{
+    padding: 40px 35px 50px 40px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(150, 150, 150, 0.1);
+    background: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+main{
+    padding: 30px 50px;
+}
+
+
+.content{
+    margin-top: 15px;
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid rgb(73, 71, 71);
+    width: 100%;
+    
+}
+
+table th{
+    background-color: rgb(214, 214, 214);
+    padding: 1px 5px;
+}
+
+
+.center{
+    text-align: center;
+}
+
+table td img{
+    width: 22px;
+}
+
+.form-box .form-btn{
+    border: none;
+    background: #f54758;
+    width: 100%;
+    height: 48px;
+    font-size: large;
+    color: #fff;
+    margin-bottom: 10px;
+
+}
+
+.form-box .form-btn:hover{
+    background-color: #f54758;
+
+    Color: #fff;
+
+    width: 220px;
+
+    height: 75px;
+
+    font-size: 25px;
+
+    border-radius: 0;
+
+    transition: all 0.3s ease;
+}
